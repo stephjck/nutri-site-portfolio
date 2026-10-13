@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Helena Duarte · Nutricionista</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;1,6..96,400&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#f2f5ef;--surface:#fbfcf8;--ink:#10241b;--muted:#586a5f;--line:#d9e0d3;--em:#0f3a2c;--em2:#1d5a45;--brass:#a8854a;--wine:#8e2a3a;--serif:'Bodoni Moda',Georgia,'Times New Roman',serif;--sans:'Figtree',system-ui,-apple-system,'Segoe UI',sans-serif}
+@media(prefers-color-scheme:dark){:root{--bg:#0b1812;--surface:#12251c;--ink:#eef3ea;--muted:#9db3a5;--line:#25392f;--em:#d8e6d6;--em2:#8fc4a4;--brass:#c9a566;--wine:#e08c9a}}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 17px/1.65 var(--sans)}
+a{color:inherit}h1,h2,h3,p{margin:0}
+.w{max-width:1160px;margin:0 auto;padding:0 24px}
+.pj{background:#0a1f17;color:#eef3ea;text-align:center;padding:10px 16px;font-size:14px;line-height:1.5}
+.pj b{color:#c9a566;font-weight:600}
+footer .fic{max-width:62ch;margin:0 auto 12px;font-size:14px;line-height:1.55}
+header.top{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+nav{display:flex;justify-content:space-between;align-items:center;height:72px}
+.logo{font:500 24px var(--serif);text-decoration:none}.logo i{color:var(--brass)}
+nav .l{display:flex;gap:28px;align-items:center}
+nav .l a:not(.btn){text-decoration:none;font-size:15px;color:var(--muted)}
+nav .l a:not(.btn):hover{color:var(--ink)}
+.btn{display:inline-block;padding:13px 26px;border-radius:999px;background:var(--em);color:var(--bg);font:600 15px var(--sans);text-decoration:none;border:1px solid var(--em);cursor:pointer}
+.btn.o{background:none;color:var(--ink);border-color:var(--line)}
+.btn:disabled{opacity:.5;cursor:not-allowed}
+:focus-visible{outline:2px solid var(--brass);outline-offset:3px}
+h2{font:400 clamp(32px,4vw,50px)/1.1 var(--serif);margin-bottom:16px}
+.lead{color:var(--muted);max-width:54ch}
+section{padding:96px 0}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center;padding:56px 0 96px}
+h1{font:400 clamp(40px,6vw,76px)/1.04 var(--serif);margin-bottom:24px;letter-spacing:-.01em}
+.hero p.lead{font-size:19px;margin-bottom:36px}
+.cta{display:flex;gap:14px;flex-wrap:wrap}
+.proof{display:flex;gap:40px;margin-top:52px;padding-top:28px;border-top:1px solid var(--line)}
+.proof b{display:block;font:500 34px var(--serif)}.proof span{font-size:14px;color:var(--muted)}
+.hw{position:relative}
+.arch{border-radius:999px 999px 28px 28px;overflow:hidden;aspect-ratio:4/5;background:linear-gradient(170deg,#1d5a45,#0a2a1f);box-shadow:0 40px 80px -30px rgba(10,42,31,.55)}
+.arch svg{display:block;width:100%;height:100%}
+.chip{position:absolute;left:-26px;bottom:44px;background:var(--surface);padding:16px 20px;border-radius:18px;box-shadow:0 20px 40px -18px rgba(0,0,0,.4);font-size:14px;line-height:1.35}
+.chip b{display:block;font:500 28px var(--serif);color:var(--em2)}
+.sg{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
+.sv{padding:56px 30px 30px;border:1px solid var(--line);border-radius:140px 140px 20px 20px;background:var(--surface);text-align:center}
+.sv svg{width:56px;height:56px;margin-bottom:18px;stroke:var(--brass);fill:none;stroke-width:1.4}
+.sv h3{font:500 22px var(--serif);margin-bottom:10px}.sv p{color:var(--muted);font-size:15.5px}
+.sv small{display:block;margin-top:16px;color:var(--em2);font-weight:600;font-size:14.5px}
+/* agenda */
+.ag{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:44px;align-items:start}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:26px;padding:28px}
+.ch{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}
+.ch h3{font:500 24px var(--serif);text-transform:capitalize}
+.ib{width:40px;height:40px;border-radius:50%;border:1px solid var(--line);background:none;color:var(--ink);font-size:18px;cursor:pointer}
+.ib:hover{border-color:var(--brass)}
+.cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px;text-align:center}
+.cal .dw{font-size:13px;color:var(--muted);padding:4px 0}
+.cal button{aspect-ratio:1;border:1px solid transparent;border-radius:14px;background:none;color:var(--ink);font:500 15px var(--sans);cursor:pointer;position:relative}
+.cal button:hover:not(:disabled){border-color:var(--brass)}
+.cal button:disabled{color:var(--muted);opacity:.4;cursor:not-allowed}
+.cal button.av::after{content:"";position:absolute;bottom:6px;left:50%;width:4px;height:4px;margin-left:-2px;border-radius:50%;background:var(--brass)}
+.cal button.td{border-color:var(--line)}
+.cal button.on{background:var(--em);color:var(--bg)}
+.cal button.on::after{background:var(--bg)}
+.sl{margin-top:24px;padding-top:20px;border-top:1px solid var(--line)}
+.sl p{font-size:15px;color:var(--muted);margin-bottom:12px}
+.slots{display:flex;flex-wrap:wrap;gap:10px}
+.slots button{padding:9px 18px;border-radius:999px;border:1px solid var(--line);background:none;color:var(--ink);font:500 15px var(--sans);cursor:pointer}
+.slots button:hover:not(:disabled){border-color:var(--brass)}
+.slots button:disabled{text-decoration:line-through;opacity:.4;cursor:not-allowed}
+.slots button.on{background:var(--brass);color:#10241b;border-color:var(--brass)}
+.sum{background:var(--bg);border:1px dashed var(--brass);border-radius:14px;padding:12px 16px;margin-bottom:18px;font-size:15px}
+.fr{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-bottom:14px}
+.f{display:block;font-size:14px;color:var(--muted)}.f.full{grid-column:1/-1}
+.f input,.f select,.f textarea{display:block;width:100%;margin-top:6px;padding:12px 14px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:400 16px var(--sans)}
+.f textarea{resize:vertical;min-height:84px}
+.err{color:var(--wine);font-size:14.5px;margin:0 0 12px;min-height:1px}
+.ok{text-align:center;padding:12px 0}
+.ok .tick{width:64px;height:64px;border-radius:50%;background:var(--em);color:var(--bg);display:grid;place-items:center;font-size:30px;margin:0 auto 16px}
+.ok h3{font:500 26px var(--serif);margin-bottom:8px}.ok p{color:var(--muted);margin-bottom:20px}
+.my{margin-top:28px}.my h3{font:500 22px var(--serif);margin-bottom:12px}
+.ap{display:flex;gap:16px;align-items:center;justify-content:space-between;padding:14px 0;border-top:1px solid var(--line);font-size:15.5px}
+.ap small{display:block;color:var(--muted)}
+.ap button{background:none;border:0;color:var(--wine);font:600 14px var(--sans);cursor:pointer;text-decoration:underline}
+/* calorias */
+.cz{background:#0a1f17;color:#eef3ea;border-radius:44px}
+.cz .lead{color:#9db3a5}
+.cg{display:grid;grid-template-columns:1.05fr .95fr;gap:24px;margin-top:44px}
+.cz .card{background:#14352a;border-color:#235040;color:#eef3ea}
+.log{height:340px;overflow:auto;display:flex;flex-direction:column;gap:12px;padding-right:6px;scrollbar-width:thin}
+.m{max-width:92%;padding:14px 16px;border-radius:18px;font-size:15.5px;line-height:1.5}
+.m.b{background:#0a1f17;border:1px solid #235040;border-bottom-left-radius:4px}
+.m.u{background:#c9a566;color:#10241b;align-self:flex-end;border-bottom-right-radius:4px}
+.m b{font-weight:600}.m .n{font:400 34px var(--serif);color:#c9a566;display:block;line-height:1.2}
+.m .it{display:flex;justify-content:space-between;gap:12px;font-size:14.5px;padding:3px 0;color:#c9d6cc}
+.m .ac{display:flex;gap:8px;margin-top:12px;flex-wrap:wrap}
+.m .src{font-size:13px;color:#9db3a5;margin-top:8px}
+.cz select,.cz input{font:400 15px var(--sans);padding:10px 12px;border-radius:10px;border:1px solid #2f5f4c;background:#0a1f17;color:#eef3ea}
+.cz .btn{background:#c9a566;border-color:#c9a566;color:#10241b;padding:10px 18px;font-size:14px}
+.cz .btn.o{background:none;color:#eef3ea;border-color:#2f5f4c}
+.qf{display:flex;gap:8px;margin-top:14px}.qf input{flex:1;min-width:0;padding:13px 16px;border-radius:999px}
+.sg2{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.sg2 button{background:none;border:1px solid #2f5f4c;color:#9db3a5;border-radius:999px;padding:6px 14px;font:400 13.5px var(--sans);cursor:pointer}
+.sg2 button:hover{color:#eef3ea;border-color:#c9a566}
+.tot{display:flex;align-items:baseline;gap:8px;font:400 52px/1 var(--serif)}
+.tot span{font:400 16px var(--sans);color:#9db3a5}
+.bar{height:10px;border-radius:9px;background:#235040;margin:14px 0 8px;overflow:hidden}
+.bar i{display:block;height:100%;background:#c9a566;border-radius:9px;transition:width .5s}
+.bar i.x{background:#e08c9a}
+.gl{display:flex;justify-content:space-between;align-items:center;font-size:14.5px;color:#9db3a5;gap:10px;flex-wrap:wrap}
+.gl input{width:84px}
+.mac{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin:20px 0}
+.mac div{background:#0a1f17;border-radius:14px;padding:12px;text-align:center;font-size:13.5px;color:#9db3a5}
+.mac b{display:block;font:400 24px var(--serif);color:#eef3ea}
+.dy{max-height:260px;overflow:auto;scrollbar-width:thin}
+.dy h4{margin:14px 0 4px;font:600 14px var(--sans);color:#c9a566;display:flex;justify-content:space-between}
+.dy .r{display:flex;gap:10px;justify-content:space-between;align-items:center;font-size:14.5px;padding:6px 0;border-top:1px solid #235040}
+.dy .r button{background:none;border:0;color:#9db3a5;cursor:pointer;font-size:18px}
+.empty{color:#9db3a5;font-size:15px;padding:12px 0}
+.note{font-size:13px;color:#9db3a5;margin-top:14px}
+/* sobre */
+.sb{display:grid;grid-template-columns:.8fr 1.2fr;gap:64px;align-items:center}
+.sb .arch{aspect-ratio:1/1.1}
+.cr{list-style:none;padding:0;margin:28px 0 0;display:grid;gap:14px}
+.cr li{padding-left:28px;position:relative;color:var(--muted)}
+.cr li::before{content:"";position:absolute;left:0;top:11px;width:14px;height:1px;background:var(--brass)}
+.cr b{color:var(--ink);font-weight:600}
+.band{background:var(--em);color:var(--bg);text-align:center;padding:80px 24px;margin-top:96px}
+.band h2{max-width:20ch;margin:0 auto 28px}
+.band .btn{background:var(--bg);color:var(--em);border-color:var(--bg)}
+footer{background:#0a1f17;color:#9db3a5;padding:44px 24px 30px;text-align:center;font-size:15px}
+footer .ct{display:flex;gap:28px;justify-content:center;flex-wrap:wrap;margin-bottom:26px;color:#eef3ea}
+footer .cp{padding-top:22px;border-top:1px solid #1d3a2e}
+@media(prefers-color-scheme:dark){.band{background:#0f3a2c;color:#eef3ea}.band .btn{color:#0f3a2c}}
+@media(max-width:900px){.hero,.ag,.cg,.sb{grid-template-columns:1fr;gap:40px}.sg{grid-template-columns:1fr}.chip{left:12px}nav .l a:not(.btn){display:none}.proof{gap:24px}section{padding:72px 0}.cz{border-radius:28px}}
+@media(max-width:520px){.fr{grid-template-columns:1fr}.card{padding:20px}.mac b{font-size:20px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="pj"><b>projeto portifolio stejockem</b> · Empresa fictícia, criada apenas para demonstrar conhecimentos.</div>
+<header class="top"><div class="w"><nav><a class="logo" href="#">Helena <i>Duarte</i></a>
+<div class="l"><a href="#atendimento">Atendimento</a><a href="#agenda">Agenda</a><a href="#calorias">Calorias</a><a href="#sobre">Sobre</a><a class="btn" href="#agenda">Agendar consulta</a></div></nav></div></header>
+
+<main>
+<div class="w">
+<div class="hero">
+<div>
+<h1>Comer bem é um ato de elegância com o seu corpo.</h1>
+<p class="lead">Nutrição clínica e esportiva com plano feito sob medida, acompanhamento próximo e ferramentas para você cuidar da alimentação todos os dias.</p>
+<div class="cta"><a class="btn" href="#agenda">Agendar consulta</a><a class="btn o" href="#calorias">Contar minhas calorias</a></div>
+<div class="proof"><div><b>12 anos</b><span>de prática clínica</span></div><div><b>2.400</b><span>pacientes atendidos</span></div><div><b>4,9</b><span>nota média das consultas</span></div></div>
+</div>
+<div class="hw">
+<div class="arch" role="img" aria-label="Tigela com abacate, tomates, folhas, laranja e frutas vermelhas">
+<svg viewBox="0 0 400 500" preserveAspectRatio="xMidYMid slice"><defs><radialGradient id="sun"><stop offset="0" stop-color="#e8c987"/><stop offset="1" stop-color="#a8854a"/></radialGradient><linearGradient id="bw" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#fbfaf4"/><stop offset="1" stop-color="#d8dccf"/></linearGradient></defs>
+<circle cx="200" cy="190" r="118" fill="url(#sun)" opacity=".92"/>
+<g fill="#f2f5ef" opacity=".08"><circle cx="60" cy="90" r="46"/><circle cx="350" cy="140" r="30"/><circle cx="330" cy="400" r="54"/></g>
+<g stroke="#2f7a58" stroke-width="2" fill="#3e9a6e"><path d="M70 330c-28-60-8-120 30-160 10 60 8 120-30 160z"/><path d="M340 340c30-64 10-126-26-168-14 62-10 126 26 168z" fill="#2f7a58"/><path d="M200 300c-20-70-6-130 18-170 18 56 14 124-18 170z" fill="#57b588"/></g>
+<path d="M60 300h280c0 90-62 150-140 150S60 390 60 300z" fill="url(#bw)"/><ellipse cx="200" cy="300" rx="140" ry="26" fill="#f4f6ec"/><ellipse cx="200" cy="300" rx="124" ry="19" fill="#e4e8da"/>
+<ellipse cx="148" cy="282" rx="42" ry="30" fill="#a3c45f"/><ellipse cx="148" cy="282" rx="32" ry="22" fill="#d6e7a2"/><circle cx="150" cy="286" r="12" fill="#7b4a2e"/>
+<circle cx="238" cy="274" r="27" fill="#d8643f"/><circle cx="238" cy="274" r="20" fill="#e98a62"/><path d="M238 254v40M218 274h40" stroke="#d8643f" stroke-width="3"/>
+<circle cx="276" cy="298" r="24" fill="#f0a735"/><circle cx="276" cy="298" r="18" fill="#f7c566"/><path d="M276 280v36M258 298h36M263 285l26 26M289 285l-26 26" stroke="#f0a735" stroke-width="2.5"/>
+<g fill="#8e2a3a"><circle cx="196" cy="296" r="9"/><circle cx="212" cy="304" r="8"/><circle cx="182" cy="308" r="7"/></g><g fill="#4a5e9e"><circle cx="110" cy="304" r="7"/><circle cx="124" cy="310" r="6"/></g>
+<g fill="#57b588" stroke="#2f7a58" stroke-width="1.5"><ellipse cx="94" cy="288" rx="22" ry="9" transform="rotate(-20 94 288)"/><ellipse cx="312" cy="284" rx="20" ry="8" transform="rotate(24 312 284)"/><ellipse cx="204" cy="262" rx="18" ry="8" transform="rotate(-8 204 262)"/></g></svg></div>
+<div class="chip"><b>−4,2 kg</b>em 7 semanas, com<br>massa magra preservada</div>
+</div></div>
+
+<section id="atendimento" style="padding-top:0">
+<h2>Cuidado completo, do prato ao resultado.</h2>
+<p class="lead">Cada plano começa com uma avaliação detalhada e evolui conforme o seu corpo responde.</p>
+<div class="sg">
+<div class="sv"><svg viewBox="0 0 56 56"><path d="M28 8c10 4 16 14 12 26-3 9-12 14-12 14s-9-5-12-14C12 22 18 12 28 8z"/><path d="M28 14v28"/></svg><h3>Nutrição clínica</h3><p>Emagrecimento, intolerâncias, diabetes, colesterol e saúde intestinal.</p><small>Primeira consulta · 90 min · R$ 280</small></div>
+<div class="sv"><svg viewBox="0 0 56 56"><circle cx="28" cy="28" r="18"/><path d="M18 30l7 7 13-17"/></svg><h3>Nutrição esportiva</h3><p>Planejamento para treino, competição e ganho de massa magra.</p><small>Consulta · 60 min · R$ 320</small></div>
+<div class="sv"><svg viewBox="0 0 56 56"><rect x="8" y="12" width="40" height="32" rx="5"/><path d="M8 22h40M18 8v8M38 8v8"/></svg><h3>Retorno e acompanhamento</h3><p>Ajustes no plano, bioimpedância e revisão de metas a cada ciclo.</p><small>Retorno · 45 min · R$ 180</small></div>
+</div></section>
+
+<section id="agenda" style="padding-top:0">
+<h2>Agende sua consulta.</h2>
+<p class="lead">Escolha o dia e o horário na agenda, preencha seus dados e receba a confirmação na hora. Atendimento presencial ou online.</p>
+<div class="ag">
+<div class="card" aria-label="Calendário de horários">
+<div class="ch"><button class="ib" id="pv" aria-label="Mês anterior">‹</button><h3 id="mt"></h3><button class="ib" id="nx" aria-label="Próximo mês">›</button></div>
+<div class="cal" id="cal"></div>
+<div class="sl"><p id="sp">Escolha um dia com ponto dourado para ver os horários.</p><div class="slots" id="slots"></div></div>
+</div>
+<div class="card" id="fc">
+<form id="fm" novalidate>
+<div class="sum" id="sm">Nenhum horário escolhido ainda.</div>
+<div class="fr">
+<label class="f full">Nome completo<input name="nome" required autocomplete="name"></label>
+<label class="f">WhatsApp<input name="tel" type="tel" required autocomplete="tel" placeholder="(00) 00000-0000"></label>
+<label class="f">E-mail<input name="email" type="email" required autocomplete="email"></label>
+<label class="f">Data de nascimento<input name="nasc" type="date"></label>
+<label class="f">Modalidade<select name="mod"><option>Presencial</option><option>Online (videochamada)</option></select></label>
+<label class="f full">Tipo de consulta<select name="tipo"><option value="prim">Primeira consulta · 90 min · R$ 280</option><option value="ret">Retorno · 45 min · R$ 180</option><option value="esp">Nutrição esportiva · 60 min · R$ 320</option></select></label>
+<label class="f full">Objetivo principal<select name="obj"><option>Emagrecimento</option><option>Ganho de massa muscular</option><option>Reeducação alimentar</option><option>Saúde e prevenção</option><option>Performance esportiva</option><option>Outro</option></select></label>
+<label class="f full">Alergias, restrições ou observações<textarea name="obs"></textarea></label>
+</div>
+<p class="err" id="er" role="alert"></p>
+<button class="btn" type="submit" style="width:100%">Confirmar agendamento</button>
+</form>
+</div>
+</div>
+<div class="my card" id="my" hidden><h3>Minhas consultas</h3><div id="ml"></div></div>
+</section>
+</div>
+
+<div class="w"><section id="calorias" class="cz" style="padding:88px 40px 96px">
+<h2>Descubra quantas calorias você come.</h2>
+<p class="lead">Pergunte ao assistente nutricional sobre qualquer alimento, adicione ao seu diário e acompanhe a meta do dia.</p>
+<div class="cg">
+<div class="card">
+<div class="log" id="lg" aria-live="polite"></div>
+<div class="sg2" id="sg2"></div>
+<form class="qf" id="qf"><input id="qi" placeholder="Ex.: quantas calorias tem 2 ovos e 1 banana?" aria-label="Pergunte sobre um alimento" autocomplete="off"><button class="btn" type="submit">Perguntar</button></form>
+<p class="note">Base com cerca de 80 alimentos e valores aproximados (referência TACO). Estimativa informativa, não substitui a orientação da nutricionista.</p>
+</div>
+<div class="card">
+<div class="gl"><span>Meu diário de hoje</span><label>Meta <input type="number" id="goal" min="800" max="6000" step="50"> kcal</label></div>
+<div class="tot" style="margin-top:14px"><b id="tk">0</b><span id="tg">de 1.900 kcal</span></div>
+<div class="bar"><i id="tb" style="width:0"></i></div>
+<div class="gl"><span id="rm"></span><button class="btn o" id="cl" type="button">Limpar dia</button></div>
+<div class="mac"><div><b id="tp">0 g</b>proteínas</div><div><b id="tc">0 g</b>carboidratos</div><div><b id="tf">0 g</b>gorduras</div></div>
+<div class="dy" id="dy"></div>
+</div>
+</div>
+</section></div>
+
+<div class="w"><section id="sobre">
+<div class="sb">
+<div class="arch" role="img" aria-label="Ilustração de folhas e frutas"><svg viewBox="0 0 400 440" preserveAspectRatio="xMidYMid slice"><circle cx="200" cy="170" r="104" fill="#a8854a" opacity=".85"/><g stroke="#2f7a58" stroke-width="2"><path d="M200 400C120 330 100 220 160 120c60 90 80 200 40 280z" fill="#57b588"/><path d="M200 400c80-70 100-180 40-280-60 90-80 200-40 280z" fill="#3e9a6e"/><path d="M200 400V160" fill="none"/></g><circle cx="86" cy="330" r="30" fill="#d8643f"/><circle cx="318" cy="350" r="26" fill="#f0a735"/><g fill="#8e2a3a"><circle cx="300" cy="90" r="12"/><circle cx="322" cy="104" r="10"/></g></svg></div>
+<div>
+<h2>Nutrição com ciência, escuta e leveza.</h2>
+<p class="lead">Sou a Helena. Acredito que um plano alimentar só funciona quando cabe na sua rotina, respeita o seu gosto e faz sentido para o seu objetivo. Nada de dietas genéricas: cada consulta parte de quem você é.</p>
+<ul class="cr"><li><b>Nutricionista clínica e esportiva</b>, CRN 00000</li><li><b>Pós-graduação</b> em Nutrição Esportiva Funcional</li><li><b>Avaliação completa</b> com bioimpedância e análise de exames</li><li><b>Plano vivo</b>: revisado a cada retorno, com apoio pelo WhatsApp</li></ul>
+</div></div></section></div>
+
+<div class="band"><h2>A primeira consulta é o começo do seu plano.</h2><a class="btn" href="#agenda">Agendar consulta</a></div>
+</main>
+
+<footer>
+<div class="ct"><span>Rua das Palmeiras, 120 · Sala 4</span><span>(00) 00000-0000</span><span>contato@helenaduarte.com.br</span><span>Seg a sex, 8h às 18h · Sáb, 8h às 12h</span></div>
+<div class="cp"><p class="fic">Esta empresa é fictícia e o site foi criado apenas com fins de demonstrar conhecimentos em desenvolvimento web e design. Nenhum nome, preço, contato ou dado exibido é real.</p>projeto portifolio stejockem</div>
+</footer>
+
+<script>
+const $=s=>document.querySelector(s);
+const store={get(k,d){try{const v=JSON.parse(localStorage.getItem(k));return v==null?d:v}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const fmt=(x,d=0)=>x.toLocaleString('pt-BR',{maximumFractionDigits:d});
+const esc=s=>s.replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const iso=d=>d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0');
+const br=s=>s.split('-').reverse().join('/');
+const T={prim:{n:'Primeira consulta',m:90,p:280},ret:{n:'Retorno',m:45,p:180},esp:{n:'Nutrição esportiva',m:60,p:320}};
+
+/* ---------- AGENDA ---------- */
+const today=new Date();today.setHours(0,0,0,0);
+let cur=new Date(today.getFullYear(),today.getMonth(),1),selD=null,selT=null,apts=store.get('apts',[]);
+const hash=s=>{let h=0;for(const c of s)h=(h*31+c.charCodeAt(0))>>>0;return h};
+function base(d){const w=d.getDay();if(w==0||d<today)return[];return w==6?['08:00','09:00','10:00','11:00']:['08:00','09:00','10:00','11:00','14:00','15:00','16:00','17:00']}
+function busy(ds,t){const now=new Date();if(ds==iso(now)&&+t.slice(0,2)<=now.getHours())return true;return hash(ds+t)%100<30||apts.some(a=>a.date==ds&&a.time==t)}
+function free(d){const ds=iso(d);return base(d).filter(t=>!busy(ds,t))}
+function drawCal(){
+  $('#mt').textContent=cur.toLocaleDateString('pt-BR',{month:'long',year:'numeric'});
+  let h=['D','S','T','Q','Q','S','S'].map(x=>`<div class="dw">${x}</div>`).join('');
+  const first=cur.getDay(),n=new Date(cur.getFullYear(),cur.getMonth()+1,0).getDate();
+  for(let i=0;i<first;i++)h+='<span></span>';
+  for(let i=1;i<=n;i++){const d=new Date(cur.getFullYear(),cur.getMonth(),i),ds=iso(d),f=free(d).length;
+    h+=`<button type="button" data-d="${ds}" class="${f?'av':''} ${ds==iso(today)?'td':''} ${ds==selD?'on':''}" ${f?'':'disabled'} aria-label="${i} de ${cur.toLocaleDateString('pt-BR',{month:'long'})}${f?', '+f+' horários':', indisponível'}">${i}</button>`}
+  $('#cal').innerHTML=h;
+  $('#pv').disabled=cur<=new Date(today.getFullYear(),today.getMonth(),1);
+}
+function drawSlots(){
+  if(!selD){$('#sp').textContent='Escolha um dia com ponto dourado para ver os horários.';$('#slots').innerHTML='';return}
+  const d=new Date(selD+'T00:00');
+  $('#sp').textContent=d.toLocaleDateString('pt-BR',{weekday:'long',day:'numeric',month:'long'});
+  $('#slots').innerHTML=base(d).map(t=>`<button type="button" data-t="${t}" class="${t==selT?'on':''}" ${busy(selD,t)?'disabled':''}>${t}</button>`).join('');
+}
+function drawSum(){$('#sm').innerHTML=selD&&selT?`<b>${new Date(selD+'T00:00').toLocaleDateString('pt-BR',{weekday:'long',day:'numeric',month:'long'})}</b> às <b>${selT}</b>`:'Nenhum horário escolhido ainda.'}
+$('#pv').onclick=()=>{cur=new Date(cur.getFullYear(),cur.getMonth()-1,1);drawCal()};
+$('#nx').onclick=()=>{cur=new Date(cur.getFullYear(),cur.getMonth()+1,1);drawCal()};
+$('#cal').onclick=e=>{const b=e.target.closest('button[data-d]');if(!b)return;selD=b.dataset.d;selT=null;drawCal();drawSlots();drawSum()};
+$('#slots').onclick=e=>{const b=e.target.closest('button[data-t]');if(!b)return;selT=b.dataset.t;drawSlots();drawSum()};
+function ics(a){const t=T[a.tipo],s=new Date(a.date+'T'+a.time),e=new Date(+s+t.m*6e4),z=d=>iso(d).replace(/-/g,'')+'T'+String(d.getHours()).padStart(2,'0')+String(d.getMinutes()).padStart(2,'0')+'00';
+  const txt=['BEGIN:VCALENDAR','VERSION:2.0','BEGIN:VEVENT','UID:'+a.id+'@helenaduarte','DTSTAMP:'+z(new Date())+'','DTSTART:'+z(s),'DTEND:'+z(e),'SUMMARY:'+t.n+' com Helena Duarte','DESCRIPTION:'+a.mod,'END:VEVENT','END:VCALENDAR'].join('\r\n');
+  const l=document.createElement('a');l.href=URL.createObjectURL(new Blob([txt],{type:'text/calendar'}));l.download='consulta.ics';l.click()}
+function drawMine(){
+  const up=apts.slice().sort((a,b)=>(a.date+a.time).localeCompare(b.date+b.time));
+  $('#my').hidden=!up.length;
+  $('#ml').innerHTML=up.map(a=>`<div class="ap"><div><b>${T[a.tipo].n}</b> · ${br(a.date)} às ${a.time}<small>${a.mod} · ${esc(a.nome)}</small></div><button data-c="${a.id}">Cancelar</button></div>`).join('');
+}
+$('#ml').onclick=e=>{const id=e.target.dataset.c;if(!id)return;apts=apts.filter(a=>a.id!=id);store.set('apts',apts);drawMine();drawCal();drawSlots()};
+$('#fm').addEventListener('submit',e=>{
+  e.preventDefault();const f=e.target,v=Object.fromEntries(new FormData(f)),er=$('#er');
+  if(!selD||!selT){er.textContent='Escolha um dia e um horário na agenda.';return}
+  if(!v.nome.trim()||!v.tel.trim()||!/^\S+@\S+\.\S+$/.test(v.email)){er.textContent='Preencha nome, WhatsApp e um e-mail válido.';return}
+  er.textContent='';
+  const a={id:Date.now(),date:selD,time:selT,...v};apts.push(a);store.set('apts',apts);
+  $('#fc').innerHTML=`<div class="ok"><div class="tick">✓</div><h3>Consulta agendada!</h3><p>${T[a.tipo].n} em <b>${br(a.date)}</b> às <b>${a.time}</b> (${a.mod.toLowerCase()}).<br>Enviaremos a confirmação para ${esc(a.email)}.</p><button class="btn" id="di" type="button">Adicionar ao meu calendário</button> <button class="btn o" id="nv" type="button">Agendar outra</button></div>`;
+  $('#di').onclick=()=>ics(a);$('#nv').onclick=()=>location.reload();
+  selD=selT=null;drawCal();drawSlots();drawMine();
+});
+
+/* ---------- BASE DE ALIMENTOS (por 100 g) ---------- */
+const DB=`Arroz branco,arroz|128|2.5|28|0.2|125|porção
+Arroz integral|124|2.6|26|1|125|porção
+Feijão cozido,feijao,feijoes|76|4.8|13.6|0.5|100|concha
+Macarrão cozido,macarrao,espaguete,massa|158|5.8|31|0.9|110|porção
+Pão francês,pao frances,paes,pao|300|8|58|3.1|50|unidade
+Pão integral,pao integral,pao de forma|253|9.4|49|3.4|25|fatia
+Tapioca|240|0.2|60|0|40|unidade
+Cuscuz|113|2.2|25|0.7|100|porção
+Batata cozida,batata|52|1.2|11.9|0|130|unidade
+Batata doce|77|0.6|18.4|0.1|130|unidade
+Mandioca cozida,aipim,macaxeira,mandioca|125|0.6|30|0.3|100|porção
+Aveia|394|13.9|66.6|8.5|15|colher de sopa
+Granola|420|10|64|14|30|porção
+Ovo cozido,ovo|146|13.3|0.6|9.5|50|unidade
+Ovo frito|240|15.6|1.2|18.6|50|unidade
+Omelete|154|11|0.6|12|100|porção
+Peito de frango grelhado,frango grelhado,frango|159|32|0|2.5|100|filé
+Carne bovina grelhada,bife,carne|219|35.9|0|7.3|100|bife
+Carne moída,carne moida|212|26|0|11|100|porção
+Salmão grelhado,salmao|229|23|0|15|120|filé
+Tilápia grelhada,tilapia,peixe|128|26|0|2.6|120|filé
+Atum em lata,atum|116|26|0|1|60|porção
+Linguiça,linguica|296|16|1|25|60|unidade
+Presunto|94|14|1|3.5|15|fatia
+Queijo muçarela,mussarela,mucarela|330|22|3|25|20|fatia
+Queijo minas frescal,queijo minas|264|17.4|3|20|30|fatia
+Queijo|350|23|2|28|20|fatia
+Requeijão,requeijao|240|9|3|22|30|colher de sopa
+Iogurte natural,iogurte|51|4.1|5|1.5|170|pote
+Iogurte grego|97|9|4|5|100|pote
+Leite integral,leite|60|3|4.6|3.3|200|copo
+Leite desnatado|35|3.4|4.9|0.1|200|copo
+Manteiga|726|0.4|0.1|82|10|porção
+Azeite|884|0|0|100|13|colher de sopa
+Banana|98|1.3|26|0.1|90|unidade
+Maçã,maca|56|0.3|15.2|0|130|unidade
+Laranja|37|1|8.9|0.1|180|unidade
+Mamão,mamao|40|0.5|10.4|0.1|170|fatia
+Abacate|96|1.2|6|8.4|100|porção
+Manga|64|0.4|16.7|0.3|200|unidade
+Morango|30|0.9|6.8|0.3|12|unidade
+Uva|53|0.7|13.6|0.2|100|porção
+Melancia|33|0.9|8.1|0|200|fatia
+Abacaxi|48|0.9|12.3|0.1|75|fatia
+Tomate|15|1.1|3.1|0.2|100|unidade
+Cenoura|34|1.3|7.7|0.2|80|unidade
+Brócolis,brocolis|25|2.1|4.4|0.5|90|porção
+Alface,salada|11|1.3|1.7|0.2|50|porção
+Amendoim|544|27|20|43|30|porção
+Castanhas,castanha de caju,castanha|590|16|20|50|20|porção
+Pasta de amendoim|588|25|20|50|15|colher de sopa
+Chocolate ao leite,chocolate|540|7|59|30|25|porção
+Chocolate amargo|546|6|46|35|25|porção
+Café,cafe|2|0.1|0.3|0|50|xícara
+Açúcar,acucar|387|0|100|0|5|colher de chá
+Mel|309|0.4|84|0|20|colher de sopa
+Pizza|266|11|33|10|110|fatia
+Hambúrguer,hamburguer|250|13|30|9|110|unidade
+Batata frita|312|3.4|41|15|100|porção
+Refrigerante,coca cola,coca-cola|42|0|10.6|0|350|lata
+Suco de laranja|45|0.7|10.4|0.2|200|copo
+Cerveja|43|0.5|3.6|0|350|lata
+Vinho|85|0.1|2.6|0|150|taça
+Água,agua|0|0|0|0|200|copo
+Pão de queijo|363|5|34|23|25|unidade
+Coxinha|260|8|27|13|90|unidade
+Açaí,acai|58|0.8|6.2|3.9|200|tigela
+Whey protein,whey|400|80|8|6|30|dose
+Sorvete|207|3.5|24|11|60|bola
+Bolo|350|5|55|12|60|fatia
+Lentilha cozida,lentilha|93|6.3|16.3|0.5|100|porção
+Grão de bico,grao de bico|164|8.9|27.4|2.6|100|porção
+Quinoa|120|4.4|21.3|1.9|100|porção
+Tofu|76|8|1.9|4.8|100|porção`.split('\n').map(l=>{const a=l.split('|');return{n:a[0].split(','),k:+a[1],p:+a[2],c:+a[3],f:+a[4],u:+a[5],l:a[6]}});
+const norm=s=>s.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/[^a-z0-9. ]/g,' ');
+const sing=w=>w.length>3&&w.endsWith('s')?w.slice(0,-1):w;
+const nw=s=>norm(s).split(/\s+/).filter(Boolean).map(sing);
+const lev=(a,b)=>{const d=[...Array(b.length+1).keys()];for(let i=1;i<=a.length;i++){let p=d[0];d[0]=i;for(let j=1;j<=b.length;j++){const t=d[j];d[j]=Math.min(d[j]+1,d[j-1]+1,p+(a[i-1]==b[j-1]?0:1));p=t}}return d[b.length]};
+function find(qw){let best=null,bs=0;
+  for(const f of DB)for(const a of f.n){const aw=nw(a);let sc=0;
+    if(aw.every(w=>qw.includes(w)))sc=aw.join('').length*10;
+    else if(aw.every(w=>w.length>3&&qw.some(x=>x.length>3&&lev(w,x)<=(w.length>6?2:1))))sc=aw.join('').length*4;
+    if(sc>bs){bs=sc;best=f}}
+  return best}
+const NUM={meio:.5,meia:.5,um:1,uma:1,dois:2,duas:2,tres:3,quatro:4,cinco:5};
+function parse(part){
+  let s=norm(part).split(/\s+/).map(w=>NUM[w]!=null?String(NUM[w]):w).join(' ');
+  const f=find(s.split(/\s+/).filter(Boolean).map(sing));if(!f)return null;
+  const m=s.match(/(\d+(?:\.\d+)?)\s*(kg|gramas?|grs?|g|ml|litros?|l)?(?![a-z])/),n=m?+m[1]:1,u=m&&m[2];
+  const g=u?n*(u[0]=='k'||u[0]=='l'?1000:1):n*f.u,r=g/100;
+  return{n:f.n[0],g,k:f.k*r,p:f.p*r,c:f.c*r,f:f.f*r,q:u?fmt(g)+' g':fmt(n,1)+' × '+f.l+' (~'+fmt(g)+' g)',per:f.k}}
+
+/* ---------- ASSISTENTE ---------- */
+const lg=$('#lg'),pend=[];
+const MEALS=['Café da manhã','Almoço','Lanche','Jantar'];
+const defMeal=()=>{const h=new Date().getHours();return h<10?0:h<14?1:h<18?2:3};
+function say(h,cls){const d=document.createElement('div');d.className='m '+cls;d.innerHTML=h;lg.append(d);lg.scrollTop=lg.scrollHeight;return d}
+say('Olá! Eu sou a assistente nutricional da Helena. Me diga um alimento e a quantidade, e eu calculo as calorias. Pode perguntar vários de uma vez.','b');
+function answer(q){
+  const parts=q.replace(/(\d),(\d)/g,'$1.$2').split(/\s+e\s+|,|\+|;/i).filter(x=>x.trim());
+  const res=parts.map(parse).filter(Boolean);
+  if(!res.length)return `Não encontrei esse alimento na minha base. Tente nomes simples, como “banana”, “arroz”, “pizza” ou “150 g de frango”.`;
+  const t=res.reduce((a,r)=>({k:a.k+r.k,p:a.p+r.p,c:a.c+r.c,f:a.f+r.f}),{k:0,p:0,c:0,f:0});
+  pend.push(res);const i=pend.length-1;
+  return `<span class="n">${fmt(t.k)} kcal</span>`+res.map(r=>`<div class="it"><span><b>${r.n}</b> · ${r.q}</span><span>${fmt(r.k)} kcal</span></div>`).join('')+
+  `<div class="src">Proteínas ${fmt(t.p,1)} g · Carboidratos ${fmt(t.c,1)} g · Gorduras ${fmt(t.f,1)} g${res.length==1?` · 100 g de ${res[0].n.toLowerCase()} = ${fmt(res[0].per)} kcal`:''}</div>
+  <div class="ac"><select aria-label="Refeição">${MEALS.map((m,j)=>`<option value="${j}" ${j==defMeal()?'selected':''}>${m}</option>`).join('')}</select><button class="btn" data-i="${i}" type="button">Adicionar ao diário</button></div>`}
+function ask(q){say(esc(q),'u');const b=say('Calculando…','b');setTimeout(()=>{b.innerHTML=answer(q);lg.scrollTop=lg.scrollHeight},450)}
+$('#qf').onsubmit=e=>{e.preventDefault();const v=$('#qi').value.trim();if(!v)return;$('#qi').value='';ask(v)};
+$('#sg2').innerHTML=['1 banana','2 ovos e 1 pão francês','150 g de arroz','1 fatia de pizza','1 colher de azeite'].map(s=>`<button type="button">${s}</button>`).join('');
+$('#sg2').onclick=e=>{if(e.target.tagName=='BUTTON')ask(e.target.textContent)};
+lg.onclick=e=>{const b=e.target.closest('button[data-i]');if(!b)return;
+  const m=+b.parentElement.querySelector('select').value;
+  pend[+b.dataset.i].forEach(r=>diary.push({...r,m,id:Math.random()}));saveDiary();b.textContent='Adicionado ✓';b.disabled=true};
+
+/* ---------- DIÁRIO ---------- */
+const dk='diary-'+iso(new Date());let diary=store.get(dk,[]),goal=store.get('goal',1900);
+function saveDiary(){store.set(dk,diary);drawDiary()}
+function drawDiary(){
+  const t=diary.reduce((a,r)=>({k:a.k+r.k,p:a.p+r.p,c:a.c+r.c,f:a.f+r.f}),{k:0,p:0,c:0,f:0});
+  $('#tk').textContent=fmt(t.k);$('#tg').textContent='de '+fmt(goal)+' kcal';
+  const pct=Math.min(100,t.k/goal*100),tb=$('#tb');tb.style.width=pct+'%';tb.className=t.k>goal?'x':'';
+  $('#rm').textContent=t.k>goal?`Passou ${fmt(t.k-goal)} kcal da meta`:`Restam ${fmt(goal-t.k)} kcal`;
+  $('#tp').textContent=fmt(t.p)+' g';$('#tc').textContent=fmt(t.c)+' g';$('#tf').textContent=fmt(t.f)+' g';
+  $('#dy').innerHTML=diary.length?MEALS.map((m,j)=>{const it=diary.filter(r=>r.m==j);if(!it.length)return'';
+    return`<h4><span>${m}</span><span>${fmt(it.reduce((a,r)=>a+r.k,0))} kcal</span></h4>`+it.map(r=>`<div class="r"><span>${r.n} · ${r.q}</span><span>${fmt(r.k)} kcal <button data-r="${r.id}" aria-label="Remover ${r.n}">×</button></span></div>`).join('')}).join(''):'<p class="empty">Seu diário está vazio. Pergunte sobre um alimento ao lado e adicione aqui.</p>';
+}
+$('#dy').onclick=e=>{const id=e.target.dataset.r;if(!id)return;diary=diary.filter(r=>String(r.id)!=id);saveDiary()};
+$('#cl').onclick=()=>{diary=[];saveDiary()};
+$('#goal').value=goal;$('#goal').onchange=e=>{goal=Math.max(800,Math.min(6000,+e.target.value||1900));e.target.value=goal;store.set('goal',goal);drawDiary()};
+
+drawCal();drawSlots();drawMine();drawDiary();
+</script>
+</body>
+</html>
